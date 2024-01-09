@@ -84,7 +84,7 @@
 - [ ] Zookeeper; commercial software
 - [x] Zookeeper; open source
 
-#### Q13. For high availability, use multiple nodes of which type?
+#### Q13. For high availability, which type of multiple nodes should you use?
 
 - [ ] data
 - [x] name
@@ -182,7 +182,7 @@
 - [ ] external schema
 - [x] schema on read
 
-#### Q27. HDFS file are of what type?
+#### Q27. HDFS files are of what type?
 
 - [ ] read-write
 - [ ] read-only
@@ -282,7 +282,7 @@
 - [ ] operating system
 - [ ] productivity tool
 
-#### Q41. If no reduction is desired, you should set the numbers of \_ tasks to zero
+#### Q41. If no reduction is desired, you should set the numbers of \_ tasks to zero.
 
 - [ ] combiner
 - [x] reduce
@@ -296,14 +296,14 @@
 - [ ] combiner
 - [x] counter
 
-#### Q43. \_ is the query language, and \_ is storage for NoSQL on Hadoop
+#### Q43. \_ is the query language, and \_ is storage for NoSQL on Hadoop.
 
 - [ ] HDFS; HQL
 - [x] HQL; HBase
 - [ ] HDFS; SQL
 - [ ] SQL; HBase
 
-#### Q44. MapReduce 1.0 \_ YARN
+#### Q44. MapReduce 1.0 \_ YARN.
 
 - [x] does not include
 - [ ] is the same thing as
@@ -529,3 +529,21 @@ FROM customers c;
 - [x] host operating system
 
 [Reference](http://doc.isilon.com/ECS/3.2/DataAccessGuide/vipr_c_hdfs_security_model.html)
+
+#### Q74. Which is not a valid input format for a MapReduce job?
+
+- [x] FileReader
+- [ ] CompositeInputFormat
+- [ ] RecordReader
+- [ ] TextInputFormat
+
+[Reference](https://hadoop.apache.org/docs/stable/api/org/apache/hadoop/mapred/InputFormat.html#:~:text=All%20Known%20Implementing%20Classes)
+
+#### Q75. If you see org.apache.hadoop.mapred, which version of MapReduce are you working with?
+
+- [x] 1.x
+- [ ] 0.x
+- [ ] 2.x
+- [ ] 3.x
+
+[Reference](https://www.edureka.co/community/40266/what-is-the-difference-between-mapred-and-mapreduce)

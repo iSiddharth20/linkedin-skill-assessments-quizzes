@@ -1,6 +1,6 @@
 ## SharePoint
 
-#### Q1. Which permission allows a user to create lists and document libraries, edit pages, apply themes?
+#### Q1. Which permission allows a user to create lists and document libraries, edit pages,and apply themes?
 
 - [ ] Edit
 - [ ] Contribute
@@ -63,7 +63,7 @@
 - [x] Microsoft 365 admin centre
 - [ ] Microsoft 365 Security
 
-#### Q10. You want to use powershell to retrieve a list of users that are members of the Viewers group in a SharePoint site. Which command do you use?
+#### Q10. You want to use PowerShell to retrieve a list of users that are members of the Viewers group in a SharePoint site. Which command do you use?
 
 - [ ] `Get -SPUserSettingsProviderManager -Web 'https://sharepoint.contoso.com' -Group 'Viewers'`
 - [ ] `Get -SPUser 'https://sharepoint.contoso.com' -Group 'Viewers'`
@@ -264,7 +264,7 @@
 - [ ] an object alert
 - [ ] a document alert
 - [ ] a site alert
-- [ ] a library alert
+- [x] a library alert
 
 #### Q34. When a user tries to create a new document in a SharePoint library, the default option is not Microsoft Word. What setting do you need to change in the library?
 
@@ -394,7 +394,7 @@
 - [ ] The current group membership page provides shortcuts at the bottom of the page to other groups.
 - [ ] The Getting Started links are updated with groups for easy access.
 
-#### Q49. A user mentios that a list in one site seems different in another site, although the lists are essentially the same. What settings is causing the discrepancy between the lists?
+#### Q49. A user mentions that a list on one site seems different on another site, although the lists are essentially the same. Which settings is causing the discrepancy between the lists?
 
 - [ ] the object permissions
 - [ ] the user permissions
@@ -499,7 +499,10 @@ B. on-change automatic trigger
 C. on-create automatic trigger
 D. on-delete automatic trigger
 
--[ ] B,C, D -[ ] A.C, D -[x] A, B,C -[ ] A, B, C, D
+- [ ] B,C, D
+- [ ] A,C, D
+- [x] A, B,C
+- [ ] A, B, C, D
 
 #### Q64. What information is required to view a secondary team calendar as an overlay with a primary team calendar?
 

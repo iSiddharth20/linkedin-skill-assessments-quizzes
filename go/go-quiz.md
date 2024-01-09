@@ -582,7 +582,11 @@ fmt.Println(val)
 - [x] 0
 - [ ] NaN
 
-[Go Playground share](https://go.dev/play/p/DjXq9wzJm5M), output:
+1. [The Go Programming Language Specification "Receive operator"](https://go.dev/ref/spec#Receive_operator), Relevant excerpt from the article:
+
+   > _A receive operation on a closed channel can always proceed immediately, yielding the element type's zero value after any previously sent values have been received._
+
+2. [Go Playground share](https://go.dev/play/p/DjXq9wzJm5M), output:
 
 ```text
 0
@@ -708,7 +712,7 @@ fmt.Println(i)
 Program exited.
 ```
 
-#### 45. Given the definition of worker below, what is the right syntax to start a start a goroutine that will call worker and send the result to a channel named ch?
+#### 45. Given the definition of worker below, what is the right syntax to start a goroutine that will call worker and send the result to a channel named ch?
 
 ```go
 func worker(m Message) Result
@@ -1056,11 +1060,20 @@ fmt.Println (n)
 #### Q59. Which is not a valid value for layout when calling time. Now ( ) . Format ( layout)?
 
 - [ ] time.REC3339
-- [ ] "1970-01-01"
+- [x] "1970-01-01"
 - [ ] "Jan 2nd 2006"
-- [x] time.Kitchen
+- [ ] time.Kitchen
 
-> The time.Kitchen constant is not a valid value for layout when calling time.Now().Format(layout). The time.Kitchen constant is used to format a time value in a 12-hour clock format with seconds, such as 3:04:05PM.
+[time#Time.Format](https://pkg.go.dev/time#Time.Format)
+
+According to the documentation, the value 1 and 01 will represent the current month.
+
+```text
+each layout string is a representation of the time stamp,
+	Jan 2 15:04:05 2006 MST
+An easy way to remember this value is that it holds, when presented in this order, the values (lined up with the elements above):
+	  1 2  3  4  5    6  -7
+```
 
 #### Q60. How would you signal to the Go compiler that the Namespace struct must implement the JSONConverter interface? This question assumes the answer would be included in the same package where Namespace is declared.
 
@@ -1236,7 +1249,7 @@ x, err := myFunc()
 
 1. [Short variable declarations](https://go.dev/ref/spec#Short_variable_declarations)
 
-#### Q66. How can You view the profiler output in cpu.pprof in the broswer?
+#### Q66. How can You view the profiler output in cpu.pprof in the browser?
 
 - [ ] go pprof -to SVG cpu.prof
 - [x] go tool pprof -http=:8080 cpu.pprof (true)
@@ -1289,3 +1302,44 @@ fmt.Println(a, b, c)
 - [ ] and
 - [x] &&
 - [ ] ||
+
+### Q72. What is an anonymous function in Go?
+
+- [ ] A function with no return type.
+- [ ] A function with no parameters.
+- [x] A function without a name.
+- [ ] A function declared inside another function.
+
+### Q73.Which keyword is used to declare an anonymous function in Go?
+
+- [ ] `func`
+- [ ] `lambda`
+- [x] `func()`
+- [ ] `anonymous`
+
+#### Q74. What is the main advantage of using anonymous functions in Go?
+
+- [ ] They always have better performance than named functions.
+- [ ] They can have multiple return values.
+- [x] They can be defined inline where they are used.
+- [ ] They have a shorter syntax than named functions.
+
+Explanation: they can be defined inline where they are used, offering more flexibility in code organization.
+
+#### Q75. What is the syntax for calling an anonymous function immediately after its declaration in Go?
+
+- [ ] `functionName(){}`
+- [ ] `call functionName(){}`
+- [x] `func(){}()`
+- [ ] `execute func(){}`
+
+[reference](https://stackoverflow.com/questions/6719089/javascript-anonymous-function-immediate-invocation-execution-expression-vs-dec)
+
+#### Q76. Which types can Go developers define methods for?
+
+- [x] `all named types not built-in to Go, such as type Example int but not int, type Example struct{...} but not struct, etc.`
+- [ ] `only types named struct, map, and slice, such as type Example struct{…}`
+- [ ] `only types named struct, such as type Example struct{...}`
+- [ ] `all types`
+
+> Methods can be defined for any named type that is not a built-in type. When you create a new type using a type declaration, it becomes a named type, and you can define methods specific to that type. However, methods cannot be directly attached to built-in types like int, string, etc. [reference](https://go.dev/ref/spec#Method_declarations)
